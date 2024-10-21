@@ -76,8 +76,8 @@ public class MyArrayList<T> implements SimpleArraylist<T> {
      */
     @Override
     public void set(int index, T newValue) {
+        Objects.checkIndex(index, size);
         data[index] = newValue;
-        get(index);
     }
 
     /**
